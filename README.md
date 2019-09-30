@@ -81,3 +81,33 @@ Web Services must have the following special behavioral features/characteristics
 - **`Supports Remote Procedure Calls(RPCs)`**: Web services allow consumers to invoke procedures, functions, and methods on remote objects using an XML-based protocol. Remote systems expose input and output framework that a web service must support
 - **`Supports Document Exchange`**: One of the essential benefits of XML is its generic way of representing not only data but also complex documents, it can be as simple as representing a current address, or they can be as complex as representing an entire book or Request for Quotation (RFQ)
 - **`Coarse-Grained`**: Object-oriented technologies such as Java expose their functions through individual methods or coarse-grained services that approach the right amount of business logic
+
+
+1.5. How Web Service works?
+---------------------
+
+<pre>
+<strong>Client                          Server</strong>
+sends REQUEST ->                <- gives RESPONSE
+(Consume Services)              (Provide various services to use) 
+              [ ueses <strong>Medium</strong> - HTTP/INTERNET                 
+              <strong>Format</strong> - XML/JSON ]
+</pre>
+
+- The client program bundle information into a SOAP message which is sent to web service as the body of an HTTP POST request
+- The web service unpacks the SOAP request and converts to a command that application can understand and gives a response with required data/information
+- The web service packages response into another SOAP message and sends back to the client program 
+- The client program unpacks the SOAP message and starts with the necessary process
+
+
+2 Introduction to SOAP Web Services
+=====================
+
+
+
+
+3 Introduction to REST Web Services
+=====================
+3 Introduction to REST API
+=====================
+

@@ -10,6 +10,12 @@ Topics included/covered
     - 1.2. [Advantages of Web Service](#12-advantages-of-web-service)
     - 1.3. [Web service Architecture](#13-web-service-architecture)
     - 1.4. [Web Service Features](#14-web-service-features)
+    - 1.5. [How Web Service works?](#15-how-web-service-works)
+
+2. [Introduction to SOAP Web Services](#2-introduction-to-soap-web-services)
+
+3. [Introduction to REST Web Services](#3-introduction-to-rest-web-services)
+
 
 1 Introduction to Web Service
 =====================
@@ -51,6 +57,7 @@ Here are some of the benefits and advantages of using Web Services:
 - Web Services use **`standardized industry protocol`** for the communication which everybody understands
 - **`Reduction in cost`** of communication/Low-Cost Communication
 
+
 1.3. Web Service Architecture
 ---------------------
 
@@ -65,3 +72,12 @@ The Web Services architecture consists of three distinct roles as given below:
 ---------------------
 1.4. Web Service Characteristics
 ---------------------
+
+Web Services must have the following special behavioral features/characteristics: 
+
+- **`XML-Based`**: Web Services uses XML to represent the data
+- **`Loosely Coupled`**: Client/Consumer and the web service are not fixed/bound/tied to each other directly
+- **`Ability to  Synchronous or Asynchronous functionality`**: Synchronicity specifies the binding of the client to the execution of the function, Asynchronous clients fetch their result at a later point in time, while synchronous clients receive their effect when the service has completed
+- **`Supports Remote Procedure Calls(RPCs)`**: Web services allow consumers to invoke procedures, functions, and methods on remote objects using an XML-based protocol. Remote systems expose input and output framework that a web service must support
+- **`Supports Document Exchange`**: One of the essential benefits of XML is its generic way of representing not only data but also complex documents, it can be as simple as representing a current address, or they can be as complex as representing an entire book or Request for Quotation (RFQ)
+- **`Coarse-Grained`**: Object-oriented technologies such as Java expose their functions through individual methods or coarse-grained services that approach the right amount of business logic

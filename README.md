@@ -113,6 +113,38 @@ There are mainly/major two ways of implementing Web Services, popular Web Servic
 2. **`REST Web Services`**: `(REpresentational State Transfer)`: [ *Medium*: HTTP (get, post, put, delete), *Format*: XML/JSON/Text ]
 
 
+1.7. Components of Web Services
+---------------------
+1.7. Components of Web Services: SOAP, WSDL, and UDDI
+---------------------
+
+While using/consuming web services, Service Consumer (client) needs to know:
+- What the Web Service is?
+- What are the different services available?
+- What are the various components of Web Service?
+- What's the structure and description of Web Service?
+- What are different/various functionalities/return types/parameters with Web Service?
+- What are the request and response parameters?
+- How to call, use and consume the Web Service?
+
+All the standard Web Services work using the following components:
+
+1. **`SOAP (Simple Object Access Protocol)`**:
+    - SOAP is a W3C recommendation for communication between applications and format for sending messages
+    - SOAP is an XML-based protocol for accessing web services and for exchanging information between computers/applications
+    - SOAP is simple and extensible also a platform, language-independent
+
+2. **`WSDL (Web Services Description Language)`**:
+    - WSDL is an XML-based language for describing web services and how to access them
+    - It's an XML based interface for the Web Services which describe all the attributes and functionalities, method name/parameter of the Web Service published by all Service Providers
+    - WSDL is the standard format for describing a web service which UDDI uses
+
+3. **`UDDI (Universal Description, Discovery, and Integration)`**:
+    - UDDI is an XML-based standard for describing, publishing, finding/discovering and integrating web services
+    - A Web Service Provider publishes his Web Service through WSDL on an online directory/registry from where consumers can query and search the Web Services
+    - UDDI is a platform-independent and open framework can communicate via SOAP, CORBA, and Java RMI Protocol
+
+
 2 Introduction to SOAP Web Services
 =====================
 

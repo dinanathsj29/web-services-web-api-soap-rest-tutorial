@@ -11,6 +11,8 @@ Topics included/covered
     - 1.3. [Web service Architecture](#13-web-service-architecture)
     - 1.4. [Web Service Features](#14-web-service-features)
     - 1.5. [How Web Service works?](#15-how-web-service-works)
+    - 1.6. [Types of Web Services](#16-types-of-web-services)
+    - 1.7. [Components of Web Services](#17-components-of-web-services)
 
 2. [Introduction to SOAP Web Services](#2-introduction-to-soap-web-services)
 
@@ -87,17 +89,28 @@ Web Services must have the following special behavioral features/characteristics
 ---------------------
 
 <pre>
-<strong>Client                          Server</strong>
-sends REQUEST ->                <- gives RESPONSE
-(Consume Services)              (Provide various services to use) 
-              [ ueses <strong>Medium</strong> - HTTP/INTERNET                 
-              <strong>Format</strong> - XML/JSON ]
+                        <strong>Client                          Server</strong>
+                        sends REQUEST ->                <- gives RESPONSE
+                        (Consume Services)              (Provide various services to use) 
+                                      [ ueses <strong>Medium</strong> - HTTP/INTERNET                 
+                                      <strong>Format</strong> - XML/JSON ]
 </pre>
 
 - The client program bundle information into a SOAP message which is sent to web service as the body of an HTTP POST request
 - The web service unpacks the SOAP request and converts to a command that application can understand and gives a response with required data/information
 - The web service packages response into another SOAP message and sends back to the client program 
 - The client program unpacks the SOAP message and starts with the necessary process
+
+
+1.6. Types of Web Services
+---------------------
+1.6. Popular Web Services
+---------------------
+
+There are mainly/major two ways of implementing Web Services, popular Web Services Protocols are:
+
+1. **`SOAP Web Services`**: `(Simple Object Access Protocol)`: [ *Medium*: HTTP (post), *Format*: XML ]
+2. **`REST Web Services`**: `(REpresentational State Transfer)`: [ *Medium*: HTTP (get, post, put, delete), *Format*: XML/JSON/Text ]
 
 
 2 Introduction to SOAP Web Services

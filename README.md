@@ -24,8 +24,11 @@ Topics included/covered
     - 3.2. [What are RESTful Web Services?](#32-what-are-restful-web-services)
     - 3.3. [Principles of REST API](#33-principles-of-rest-api)
     - 3.4. [Features of REST API](#34-features-of-rest-api)
-    - 3.5. [Methods of REST API](#35-methods-of-rest-api)
+    - 3.5. [Method  s of REST API](#35-methods-of-rest-api)
     - 3.6. [Advantages of REST API](#36-advantages-of-rest-api)
+
+4. [SOAP Vs REST](#4-soap-vs-rest)
+    - 4.1. [SOAP vs REST Web Services](#41-soap-vs-rest-web-services)
 
 
 1 Introduction to Web Service
@@ -295,4 +298,28 @@ There are many principles/constraints of REST architecture a Web Service needs t
 - **Language and Platform independent**: Can be written in any programming language and executed in any platform
 - **Permits different data format**: Plain Text, HTML, XML and JSON
 - **Can use SOAP**: RESTful web services can use SOAP API/web services as the implementation
+
+
+4 SOAP Vs REST
+=====================
+4 SOAP Vs. REST: Difference between Web API Services
+=====================
+
+
+4.1. SOAP vs REST Web Services
+---------------------
+
+There are many differences between SOAP and REST web services, some important differences are given below:
+
+| SOAP Web Services/API               | REST Web Services/API               |
+| ------------------------------------| ----------------------------------- |
+| SOAP stands for **`Simple Object Access Protocol`** | REST stands for **`REpresentational State Transfer`** |
+| SOAP is a **`protocol`**            | REST is an **`architectural style`** |
+| SOAP can't use REST because it is a protocol but REST is an architectural pattern                               | REST can use SOAP web services as it is an architectural pattern/concept and can use any protocol like HTTP, SOAP |
+| SOAP uses **`service interfaces`** to expose the business logic | REST uses **`URI (URL path)`** to expose business logic |
+| SOAP requires **`more bandwidth and resource`** than REST | REST requires **`less bandwidth and resource`** than SOAP |
+| SOAP is **`slow`** as compared to REST | REST is **`fast`** as compared to SOAP |
+| SOAP permits **`XML`** data format only | REST permits different data format such as **`Plain text, HTML, JSON, XML`** etc. |
+| SOAP is **`less preferred`** than REST   | REST IS **`more preferred`** than SOAP |
+
 

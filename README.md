@@ -15,8 +15,17 @@ Topics included/covered
     - 1.7. [Components of Web Services](#17-components-of-web-services)
 
 2. [Introduction to SOAP Web Services](#2-introduction-to-soap-web-services)
+    - 2.1. [What are SOAP Web Services?](#21-what-are-soap-web-services)
+    - 2.2. [SOAP Web Services Specifications/standards](#22-soap-web-services-specifications/standards)
+    - 2.3. [Disadvantages of SOAP Web Services](#23-disadvantages-of-soap-web-services)
 
 3. [Introduction to REST Web Services](#3-introduction-to-rest-web-services)
+    - 3.1. [What is REST API?](#31-what-is-rest-api)
+    - 3.2. [What are RESTful Web Services?](#32-what-are-restful-web-services)
+    - 3.3. [Principles of REST API](#33-principles-of-rest-api)
+    - 3.4. [Features of REST API](#34-features-of-rest-api)
+    - 3.5. [Methods of REST API](#35-methods-of-rest-api)
+    - 3.6. [Advantages of REST API](#36-advantages-of-rest-api)
 
 
 1 Introduction to Web Service
@@ -66,7 +75,7 @@ Here are some of the benefits and advantages of using Web Services:
 The Web Services architecture consists of three distinct roles as given below:
 
 1. **`Service Provider`**: The provider creates/implements the Web Service and makes it available on the internet to other client application who want to use it
-2. **`Service Requestor`**: Requestor is consumer/client application that utilizes an existing web service by sending an XML request. The client application can be a .Net, Java, JavaScript or other language application which looks some sort of functionality via a web service
+2. **`Service Requestor`**: Requestor is a consumer/client application that utilizes an existing web service by sending an XML request. The client application can be a .Net, Java, JavaScript or other language application which looks some sort of functionality via a web service
 3. **`Service Registry/Broker`**: The registry is a logically centralized directory of services where developers can publish new services or find existing ones ( like centralized clearinghouse or brokerage house for companies and their services). The broker is an application provides access to the `UDDI (Universal Description, Discovery, and Integration)` which enables the client application to locate the web service
 
 
@@ -89,11 +98,11 @@ Web Services must have the following special behavioral features/characteristics
 ---------------------
 
 <pre>
-                        <strong>Client                          Server</strong>
-                        sends REQUEST ->                <- gives RESPONSE
-                        (Consume Services)              (Provide various services to use) 
-                                      [ ueses <strong>Medium</strong> - HTTP/INTERNET                 
-                                      <strong>Format</strong> - XML/JSON ]
+                  <strong>Client                          Server</strong>
+                  sends REQUEST ->                <- gives RESPONSE
+                  (Consume Services)              (Provide various services to use) 
+                                [ ueses <strong>Medium</strong> - HTTP/INTERNET                 
+                                <strong>Format</strong> - XML/JSON ]
 </pre>
 
 - The client program bundle information into a SOAP message which is sent to web service as the body of an HTTP POST request
@@ -123,7 +132,7 @@ While using/consuming web services, Service Consumer (client) needs to know:
 - What are the different services available?
 - What are the various components of Web Service?
 - What's the structure and description of Web Service?
-- What are different/various functionalities/return types/parameters with Web Service?
+- What are the different/various functionalities/return types/parameters with Web Service?
 - What are the request and response parameters?
 - How to call, use and consume the Web Service?
 
@@ -148,11 +157,142 @@ All the standard Web Services work using the following components:
 2 Introduction to SOAP Web Services
 =====================
 
+2.1. What are SOAP Web Services?
+---------------------
 
+- SOAP (Simple Object Access Protocol), a W3C recommendation for communication between two applications
+- SOAP is an XML-based protocol for accessing web services over HTTP
+- Any Web Service that complies and follows some guidelines which are led down by **SOAP Web Services specifications** is a SOAP Web Service
+
+
+2.2. SOAP Web Services Specifications/standards
+---------------------
+2.2. SOAP Building blocks
+---------------------
+
+There are two categories of SOAP Web Services specifications: as Basic specification and Extended specification:
+1. Basic
+    - **SOAP**
+      - Protocol / Rules / Definitions related to how two different applications will talk to each other over the web
+      - All SOAP message/information exchange happens with the common format: XML
+        - XML messages have a pre-defined structure as **SOAP MESSAGE** which consists of Envelope, Header, and Body
+          - **Envelope** - root element of a message
+          - **Header** - components, complex types, authentication parameters
+          - **Body** - actual request to be sent to the server
+    - **WSDL (Web Services Description Language)**
+    - **UDDI (Universal Description, Discovery, and Integration)**
+2. Extended
+    - Web Services Security (WS-Security)
+    - Web Services Policy (WS-Policy)
+
+### Who defines Web Services Specifications/standards
+W3C (World Wide Web Consortium) - [An International community that develops open standards for worldwide web] defines and dictates all standards for Web Services
+
+
+2.3. Disadvantages of Soap Web Services
+---------------------
+
+- **Slow**: SOAP uses XML format, whose parsing is slow and consumes more bandwidth and resource
+- **WSDL dependent**: SOAP uses WSDL and doesn't have other mechanisms to discover the service
 
 
 3 Introduction to REST Web Services
 =====================
 3 Introduction to REST API
 =====================
+
+3.1. What is REST API?
+---------------------
+- REST (REpresentational State Transfer) 
+- REST is an architectural style
+  - REST is not a protocol, 
+  - there are no strict specifications, 
+  - no central body like W3C to control specifications
+- REST is a design principle, one can use design principles/methods to create a service, which creates **RESTful Web Services**
+
+REST is an architectural style as well as an approach for communications purpose that is often used in various web services development
+  - Introduced by Roy Fielding in the year 2000
+  - It is often regarded as the `"language of the internet"`
+  - It is a stateless client and server model
+  - REST is used to build Web Services that are lightweight, maintainable, and scalable
+
+
+3.2. What are RESTful Web Services?
+---------------------
+
+Any Web Service that complies and follows some guidelines which are led down by **REST architecture/principles** is a called a RESTful Web Service [A service which is built on the REST architecture is called a RESTful service]
+
+
+3.3. Principles of REST API
+---------------------
+3.3. RESTFul Principles and Constraints
+---------------------
+
+There are many principles/constraints of REST architecture a Web Service needs to follow to become/deemed as REST API / RESTful API-Web Service:
+1. **Uniform Interface**: 
+    - **Resource** - Everything is a resource
+      - any platform, any Database, any language - we can create a module or resource for Students, Employees or anything
+    - **URI** - Any resource/data can be accessed by a URI
+      - URI = Uniform Resource Identifier
+      - http://domain.name/resource
+      - http://website.com/students
+      - https://website.com/employee/id=100
+    - **HTTP** - Make explicit use of HTTP methods
+      - HTTP = HyperText Transfer Protocol
+      - HTTP methods are: GET, POST, PUT, DELETE
+      - Using HTTP methods along with URI, we can REQUEST and can access/modify any resource or resource information
+2. **Client-Server**: 
+    - Client & Server are separate identities, Clients send REQUEST and Server RESPONDS with headers, status or response body
+3. **Stateless**: 
+    - All client-server communications are stateless
+    - In case of REST, the server does not maintain any state of the system and client has to send the request which is complete/proper in itself (every request will be independent and will not be dependent on any previous requests)
+    - Each request from the client to the server - must contain all the data that is necessary to handle the request, no need to store any data on the server
+    - A server should not require to store the state of a session
+    - As the server does not store any old/past/unwanted data, it improves Web Service performance
+4. **Cacheable**:
+    - Caching happens at the client-side
+    - The client uses the **Cache-Control** header to determine whether to cache the resource (make a local copy) or not
+    - The server generates responses that indicate whether they are cacheable or not to improve the performance by reducing number of requests for duplicate resources [server does it with the help of **Cache-Control** and **Last-Modified (date value)**]
+5. **Layered System**:
+    - Multiple Layers can exist between client and server
+    - Layers can include **Proxies**, **Gateways**, **Caching** they are HTTP intermediaries
+    - Layers can be used for message translations / improving performance with caching etc.
+    - Enables security, load-balancing and share caching to improve application performance
+    - **Proxies** - Proxy server evaluates, control its complexity and simplify the request
+    - **Gateways** - Used to manage traffic on the network, protocol translations, etc.
+    - **Caching** - Improves performance and scalability
+6. **Code On Demand**:
+    - Ability to download and execute code on the client-side
+
+
+3.4. Features of REST API
+---------------------
+- Simpler than SOAP API
+- Proper Documentation available
+- Throws/Log proper Error messages
+
+
+3.5. Methods of REST API
+---------------------
+
+<pre>
+- <strong>Creat</strong>        =   <strong>POST</strong> method
+- <strong>Read</strong>         =   <strong>GET</strong> method  
+- <strong>Update</strong>       =   <strong>PUT</strong> method
+- <strong>Delete</strong>       =   <strong>DELETE</strong> method
+</pre>
+
+1. **`POST`** – Create a new data/info/record using the RESTful web service
+2. **`GET`** - Get a list of all data/info/record
+3. **`PUT`** - Update all data/info/record
+4. **`DELETE`** - Delete all data/info/record
+
+
+3.6. Advantages of REST API
+---------------------
+
+- **Fast**: Due to no strict specification like SOAP, REST consumes less bandwidth and resource
+- **Language and Platform independent**: Can be written in any programming language and executed in any platform
+- **Permits different data format**: Plain Text, HTML, XML and JSON
+- **Can use SOAP**: RESTful web services can use SOAP API/web services as the implementation
 
